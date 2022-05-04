@@ -1,0 +1,31 @@
+<?php
+
+use InsuranceApp\ViewHelpers;
+
+?>
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>All Quotes</title>
+    <link href='//fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css'>
+    <link href="/normalize.css" rel="stylesheet" type="text/css">
+    <link href="/styles.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<?= ViewHelpers\NavigationViewHelper::displayNavbar() ?>
+
+<h1>Accepted Quotes</h1>
+<section>
+    <?= ViewHelpers\QuotesViewHelper::displayManyQuotes($accepted) ?>
+</section>
+
+<h1>Unaccepted Quotes</h1>
+<section>
+    <?= ViewHelpers\QuotesViewHelper::displayManyQuotes($unaccepted) ?>
+</section>
+
+</body>
+</html>
