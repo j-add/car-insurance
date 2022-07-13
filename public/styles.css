@@ -100,3 +100,10 @@ td, th {
     border-radius: 5px;
 }
 
+.quoteButtons {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    justify-content: center;
+}
+

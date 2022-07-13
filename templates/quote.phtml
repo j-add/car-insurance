@@ -2,15 +2,6 @@
 
 use InsuranceApp\ViewHelpers;
 
-//
-//echo '<pre>';
-//var_dump($five);
-//echo '</pre>';
-//
-//echo '<pre>';
-//var_dump($six);
-//echo '</pre>';
-
 ?>
 
 <!DOCTYPE html>
@@ -29,7 +20,12 @@ use InsuranceApp\ViewHelpers;
 <h1>Your Quote</h1>
 <section>
     <?= ViewHelpers\QuotesViewHelper::displaySingleQuote($singleQuote) ?>
-    <?= ViewHelpers\QuotesViewHelper::displayAcceptQuoteButton($id) ?>
+    <div class="quoteButtons">
+        <?= ViewHelpers\QuotesViewHelper::displayAcceptQuoteButton($id) ?>
+        <a href=".">
+            <button>Cancel</button>
+        </a>
+    </div>
 </section>
 
 </body>
