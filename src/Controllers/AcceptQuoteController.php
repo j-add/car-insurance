@@ -18,12 +18,13 @@ class AcceptQuoteController
         $this->quotesModel = $quotesModel;
     }
 
-    public function __invoke(Request $request, Response $response, array $args)
+    public function __invoke(Request $request, Response $response, array $args): Response
     {
         $post = $request->getParsedBody();
         $this->quotesModel->acceptQuote($post['id']);
+        $response = $response->withStatus(200);
 
-        return $response->withHeader('Location', '/quotes');
+        return $response->withHeader('Location', "./quotes");
     }
 }
 
