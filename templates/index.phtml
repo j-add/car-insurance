@@ -1,0 +1,24 @@
+<?php
+
+use InsuranceApp\ViewHelpers;
+
+?>
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>🚗 Get An Insurance Quote 🚗</title>
+    <link href='//fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css'>
+    <link href="/normalize.css" rel="stylesheet" type="text/css">
+    <link href="/styles.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<?= ViewHelpers\NavigationViewHelper::displayNavbar() ?>
+
+<h1>Get a Quote</h1>
+<?= ViewHelpers\QuotesViewHelper::displayNewQuoteForm($cartypes, $covertypes, '/yourquote'); ?>
+
+</body>
+</html>

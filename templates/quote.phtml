@@ -1,0 +1,36 @@
+<?php
+
+use InsuranceApp\ViewHelpers;
+
+//
+//echo '<pre>';
+//var_dump($five);
+//echo '</pre>';
+//
+//echo '<pre>';
+//var_dump($six);
+//echo '</pre>';
+
+?>
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Your Quote</title>
+    <link href='//fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css'>
+    <link href="/normalize.css" rel="stylesheet" type="text/css">
+    <link href="/styles.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<?= ViewHelpers\NavigationViewHelper::displayNavbar() ?>
+
+<h1>Your Quote</h1>
+<section>
+    <?= ViewHelpers\QuotesViewHelper::displaySingleQuote($singleQuote) ?>
+    <?= ViewHelpers\QuotesViewHelper::displayAcceptQuoteButton($id) ?>
+</section>
+
+</body>
+</html>
