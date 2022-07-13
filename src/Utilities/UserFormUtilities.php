@@ -12,7 +12,12 @@ class UserFormUtilities
     public function sanitiseNameInput(string $input): string
     {
         $input = preg_replace('/[^a-zA-Z \'-]/', '', $input);
+<<<<<<< HEAD
         return self::formatToTitleCase($input);
+=======
+        $input = self::formatToTitleCase($input);
+        return $input;
+>>>>>>> origin/master
     }
 
     public function sanitiseValueInput(string $value): float
